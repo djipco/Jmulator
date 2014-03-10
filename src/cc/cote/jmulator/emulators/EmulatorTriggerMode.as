@@ -1,4 +1,4 @@
-package cc.cote.jmulator
+package cc.cote.jmulator.emulators
 {
 	/**
 	 * An enumeration class that defines the trigger modes that can be used with the various

@@ -1,1 +1,332 @@
-﻿package cc.cote.jmulator.emulators {	import cc.cote.jmulator.Emulator;	import flash.ui.Keyboard;	import flash.display.InteractiveObject;		/**     * 	Dispatched when any input changes     */    [Event( name="any", type="cc.cote.jmulator.EmulatorEvent" )]    	/**     * 	Dispatched when there is a change on the board input labeled "1RGHT"     */    [Event( name="1RGHT", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1LEFT"     */    [Event( name="1LEFT", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1UP"     */    [Event( name="1UP", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1DOWN"     */    [Event( name="1DOWN", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW1"     */    [Event( name="1SW1", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW2"     */    [Event( name="1SW2", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW3"     */    [Event( name="1SW3", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW3"     */    [Event( name="1SW3", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW4"     */    [Event( name="1SW4", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW5"     */    [Event( name="1SW5", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW6"     */    [Event( name="1SW6", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW7"     */    [Event( name="1SW7", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1SW8"     */    [Event( name="1SW8", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1STRT"     */    [Event( name="1STRT", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1COIN"     */    [Event( name="1COIN", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1A"     */    [Event( name="1A", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "1B"     */    [Event( name="1B", type="cc.cote.jmulator.EmulatorEvent" )]    	/**     * 	Dispatched when there is a change on the board input labeled "2RGHT"     */    [Event( name="2RGHT", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2LEFT"     */    [Event( name="2LEFT", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2UP"     */    [Event( name="2UP", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2DOWN"     */    [Event( name="2DOWN", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW1"     */    [Event( name="2SW1", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW2"     */    [Event( name="2SW2", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW3"     */    [Event( name="2SW3", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW4"     */    [Event( name="2SW4", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW5"     */    [Event( name="2SW5", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW6"     */    [Event( name="2SW6", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW7"     */    [Event( name="2SW7", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2SW8"     */    [Event( name="2SW8", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2STRT"     */    [Event( name="2STRT", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2COIN"     */    [Event( name="2COIN", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2A"     */    [Event( name="2A", type="cc.cote.jmulator.EmulatorEvent" )]        /**     * 	Dispatched when there is a change on the board input labeled "2B"     */    [Event( name="2B", type="cc.cote.jmulator.EmulatorEvent" )]	/**	 * The IpacVe class defines the characteristics of the I-PAC VE board made 	 * by Ultimarc. It extends the base Emulator class and, primarily, contains 	 * the mappings between input labels and keyboard key codes that are 	 * specific to this model. If you want to use an I-PAC VE board, this is the	 * class to instantiate.	 * 	 * <p>Using this class is straightforward. You create an IpacVe object and 	 * then add listeners to it for the inputs you are interested in. Here is a 	 * simple example to get you started :</p>	 * 	 * <listing version="3.0">	 * 	 * import cc.cote.jmulator.*;	 * import cc.cote.jmulator.emulators.*;	 * 	 * var emu:IpacVe = new IpacVe(stage);	 * emu.addEventListener(IpacVE.INPUT_2COIN, test);	 * 	 * function test(e:EmulatorEvent):void {	 * 	trace(e);	 * }	 * </listing>	 * 	 * <p>Please note that this class will only work with encoders using the 	 * default (MAME) settings and not with custom programs.</p>	 * 	 * <p>Limitations : Flash Player is currently unable to detect a KEY_DOWN or 	 * KEY_UP event for the ALT key. This means that the input labeled "1SW2" 	 * (which uses the ALT key in the default MAME configuration) does not work.	 * </p>	 * 	 * <p>Also note that the 1SW4 input - which is assigned to the SHIFT key - 	 * will never be in typematic mode. This is the behaviour of the SHIFT key 	 * on most modern operating systems and has nothing to do with you board, 	 * Flash or this library.</p>	 * 	 * @see http://www.ultimarc.com Ultimarc's website	 * @see cc.cote.jmulator.Emulator Emulator class	 */	public class IpacVe extends Emulator 	{		/**		 * Constant used to trigger events for all keys. Allows listening to all		 * inputs at once		 */		public static const INPUT_ANY:String = 'any'; // value must be 'any'				/**		 * Constant associated with the input labeled <code>1RGHT</code> on the		 * emulator board.		 */		public static const INPUT_1RGHT:String 	= '1RGHT';				/**		 * Constant associated with the input labeled <code>1LEFT</code> on the		 * emulator board.		 */		public static const INPUT_1LEFT:String 	= '1LEFT';				/**		 * Constant associated with the input labeled <code>1UP</code> on the		 * emulator board.		 */		public static const INPUT_1UP:String 		= '1UP';				/**		 * Constant associated with the input labeled <code>1DOWN</code> on the		 * emulator board.		 */		public static const INPUT_1DOWN:String 	= '1DOWN';				/**		 * Constant associated with the input labeled <code>1SW1</code> on the		 * emulator board.		 */		public static const INPUT_1SW1:String 		= '1SW1';				/**		 * Constant associated with the input labeled <code>1SW2</code> on the		 * emulator board.		 */		public static const INPUT_1SW2:String 		= '1SW2';				/**		 * Constant associated with the input labeled <code>1SW3</code> on the		 * emulator board.		 */		public static const INPUT_1SW3:String 		= '1SW3';				/**		 * Constant associated with the input labeled <code>1SW4</code> on the		 * emulator board.		 */		public static const INPUT_1SW4:String 		= '1SW4';				/**		 * Constant associated with the input labeled <code>1SW5</code> on the		 * emulator board.		 */		public static const INPUT_1SW5:String 		= '1SW5';				/**		 * Constant associated with the input labeled <code>1SW6</code> on the		 * emulator board.		 */		public static const INPUT_1SW6:String 		= '1SW6';				/**		 * Constant associated with the input labeled <code>1SW7</code> on the		 * emulator board.		 */		public static const INPUT_1SW7:String 		= '1SW7';				/**		 * Constant associated with the input labeled <code>1SW8</code> on the		 * emulator board.		 */		public static const INPUT_1SW8:String 		= '1SW8';				/**		 * Constant associated with the input labeled <code>1STRT</code> on the		 * emulator board.		 */		public static const INPUT_1STRT:String 	= '1STRT';				/**		 * Constant associated with the input labeled <code>1COIN</code> on the		 * emulator board.		 */		public static const INPUT_1COIN:String 	= '1COIN';				/**		 * Constant associated with the input labeled <code>1A</code> on the		 * emulator board.		 */		public static const INPUT_1A:String 		= '1A';				/**		 * Constant associated with the input labeled <code>1B</code> on the		 * emulator board.		 */		public static const INPUT_1B:String 		= '1B';				/**		 * Constant associated with the input labeled <code>2RGHT</code> on the		 * emulator board.		 */		public static const INPUT_2RGHT:String 	= '2RGHT';				/**		 * Constant associated with the input labeled <code>2LEFT</code> on the		 * emulator board.		 */		public static const INPUT_2LEFT:String 	= '2LEFT';				/**		 * Constant associated with the input labeled <code>2UP</code> on the		 * emulator board.		 */		public static const INPUT_2UP:String 		= '2UP';				/**		 * Constant associated with the input labeled <code>2DOWN</code> on the		 * emulator board.		 */		public static const INPUT_2DOWN:String 	= '2DOWN';		/**		 * Constant associated with the input labeled <code>2SW1</code> on the		 * emulator board.		 */		public static const INPUT_2SW1:String 		= '2SW1';				/**		 * Constant associated with the input labeled <code>2SW2</code> on the		 * emulator board.		 */		public static const INPUT_2SW2:String 		= '2SW2';				/**		 * Constant associated with the input labeled <code>2SW1</code> on the		 * emulator board.		 */		public static const INPUT_2SW3:String 		= '2SW3';				/**		 * Constant associated with the input labeled <code>2SW1</code> on the		 * emulator board.		 */		public static const INPUT_2SW4:String 		= '2SW4';				/**		 * Constant associated with the input labeled <code>2SW1</code> on the		 * emulator board.		 */		public static const INPUT_2SW5:String 		= '2SW5';				/**		 * Constant associated with the input labeled <code>2SW6</code> on the		 * emulator board.		 */		public static const INPUT_2SW6:String 		= '2SW6';				/**		 * Constant associated with the input labeled <code>2SW7</code> on the		 * emulator board.		 */		public static const INPUT_2SW7:String 		= '2SW7';				/**		 * Constant associated with the input labeled <code>2SW8</code> on the		 * emulator board.		 */		public static const INPUT_2SW8:String 		= '2SW8';				/**		 * Constant associated with the input labeled <code>2STRT</code> on the		 * emulator board.		 */		public static const INPUT_2STRT:String 	= '2STRT';				/**		 * Constant associated with the input labeled <code>2COIN</code> on the		 * emulator board.		 */		public static const INPUT_2COIN:String 	= '2COIN';				/**		 * Constant associated with the input labeled <code>2A</code> on the		 * emulator board.		 */		public static const INPUT_2A:String 		= '2A';				/**		 * Constant associated with the input labeled <code>2B</code> on the		 * emulator board.		 */		public static const INPUT_2B:String 		= '2B';				/**		 * Creates an IpacVe object extending the base Emulator object. On top		 * of inherited properties, this object defines the board-specific 		 * mappings between i label and key codes generated.		 * 		 * 		 * @param listenOn An InteractiveObject to attach the keyboard listener 		 * to. Usually this is the Stage.		 * @param typematic Whether or not to use the OS typematic feature		 * @param triggering The method to use to trigger events. Can be 		 * Emulator.TRIGGER_ON, Emulator.TRIGGER_OFF or Emulator.TRIGGER_BOTH		 * (default). TRIGGER_ON means to dispatch the events only when the input		 * is activated, TRIGGER_OFF means to dispatch the events only when the 		 * input is deactivated and TRIGGER_BOTH means to trigger events when the 		 * input is activated and deactivated.		 */						public function IpacVe(listenOn:InteractiveObject, 					typematic:Boolean = true, triggering:String = 'both') {						super(listenOn, typematic, triggering);						map[Keyboard.RIGHT] 	= [INPUT_1RGHT];	// right arrow 	(39)			map[Keyboard.LEFT] 		= [INPUT_1LEFT];	// left arrow 	(37)			map[Keyboard.UP] 		= [INPUT_1UP];		// up arrow 	(38)			map[Keyboard.DOWN] 		= [INPUT_1DOWN];	// down arrow 	(40)						map[Keyboard.CONTROL] 	= [INPUT_1SW1];		// left-ctrl 	(17)			map['disabled']		 	= [INPUT_1SW2];		// left-alt		(18)			map[Keyboard.SPACE] 	= [INPUT_1SW3];		// space 		(32)			map[Keyboard.SHIFT] 	= [INPUT_1SW4];		// left-shift 	(16)			map[90]			 		= [INPUT_1SW5];		// z			map[88]			 		= [INPUT_1SW6];		// x			map[67]			 		= [INPUT_1SW7];		// c			map[86]			 		= [INPUT_1SW8];		// v			map[49] 				= [INPUT_1STRT];	// 1			map[53]					= [INPUT_1COIN];	// 5						map[80]			 		= [INPUT_1A];		// p			map[Keyboard.ENTER]		= [INPUT_1B];		// enter	 	(13)						map[71] 				= [INPUT_2RGHT];	// g			map[68] 				= [INPUT_2LEFT];	// d			map[82] 				= [INPUT_2UP];		// r			map[70] 				= [INPUT_2DOWN];	// f									map[65] 				= [INPUT_2SW1];		// a			map[83] 				= [INPUT_2SW2];		// s			map[81] 				= [INPUT_2SW3];		// q			map[87] 				= [INPUT_2SW4];		// w			map[73]			 		= [INPUT_2SW5];		// i			map[75]			 		= [INPUT_2SW6];		// k			map[74]			 		= [INPUT_2SW7];		// j			map[76]			 		= [INPUT_2SW8];		// l						map[54]					= [INPUT_2COIN];	// 6			map[50] 				= [INPUT_2STRT];	// 2						map[Keyboard.TAB]		= [INPUT_2A];		// tab 			(9)			map[Keyboard.ESCAPE]	= [INPUT_2B];		// esc 			(27)					}	}}
+package cc.cote.jmulator.emulators 
+{
+	import flash.display.InteractiveObject;
+	import flash.system.Capabilities;
+	import flash.ui.Keyboard;
+	
+	import cc.cote.jmulator.events.IpacVeEvent;
+	
+	/**
+     * Dispatched when any of the board's input changes.
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.ANY_INPUT
+     */
+	[Event(name="anyInput", type="cc.cote.jmulator.events.IpacVeEvent")]
+     
+	/**
+     * Dispatched when there is a change on the board input labeled "1RGHT"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1RGHT
+     */
+    [Event(name="input_1rght", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1LEFT"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1LEFT
+     */
+    [Event(name="input_1left", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1UP"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1UP
+     */
+    [Event(name="input_1up", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1DOWN"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1DOWN
+     */
+    [Event(name="input_1down", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1SW1"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW1
+     */
+    [Event(name="input_1sw1", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1SW2"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW2
+     */
+    [Event(name="input_1sw2", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1SW3"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW3
+     */
+    [Event(name="input_1sw3", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1SW4"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW4
+     */
+    [Event(name="input_1sw4", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * 	Dispatched when there is a change on the board input labeled "1SW5"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW5
+     */
+    [Event(name="input_1sw5", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1SW6"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW6
+     */
+    [Event(name="input_1sw6", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1SW7"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW7
+     */
+    [Event(name="input_1sw7", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1SW8"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1SW8
+     */
+    [Event(name="input_1sw8", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * 	Dispatched when there is a change on the board input labeled "1STRT"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1STRT
+     */
+    [Event(name="input_1strt", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1COIN"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1COIN
+     */
+    [Event(name="input_1coin", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1A"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1A
+     */
+    [Event(name="input_1a", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "1B"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_1B
+     */
+    [Event(name="input_1b", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+	/**
+     * Dispatched when there is a change on the board input labeled "2RGHT"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2RGHT
+     */
+    [Event(name="input_2rght", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2LEFT"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2LEFT
+     */
+    [Event(name="input_2left", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2UP"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2UP
+     */
+    [Event(name="input_2up", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2DOWN"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2DOWN
+     */
+    [Event(name="input_2down", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW1"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW1
+     */
+    [Event(name="input_2sw1", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW2"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW2
+     */
+    [Event(name="input_2sw2", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW3"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW3
+     */
+    [Event(name="input_2sw3", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW4"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW4
+     */
+    [Event(name="input_2sw4", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW5"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW5
+     */
+    [Event(name="input_2sw5", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW6"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW6
+     */
+    [Event(name="input_2sw6", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW7"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW7
+     */
+    [Event(name="input_2sw7", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2SW8"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2SW8
+     */
+    [Event(name="input_2sw8", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2STRT"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2STRT
+     */
+    [Event(name="input_2strt", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2COIN"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2COIN
+     */
+    [Event(name="input_2coin", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2A"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2A
+     */
+    [Event(name="input_2a", type="cc.cote.jmulator.events.IpacVeEvent")]
+    
+    /**
+     * Dispatched when there is a change on the board input labeled "2B"
+	 * @eventType cc.cote.jmulator.events.IpacVeEvent.INPUT_2B
+     */
+    [Event(name="input_2b", type="cc.cote.jmulator.events.IpacVeEvent")]
+
+	/**
+	 * The IpacVe class defines the characteristics of the I-PAC VE board made by Ultimarc. It 
+	 * extends the base Emulator class and provides various functionalities to simplify working with 
+	 * this keyboard emulators. Namely, you will be freed from researching keyboard codes. You will 
+	 * be able to simply listen to events bearing the same names as the labels on the board you use. 
+	 * The class also offers additional functionalities such as selective typematic management and 
+	 * the choice between receiving all events, only ON events or only OFF events.
+	 * 
+	 * <p>Using this class is straightforward. You create an IpacVe object and then add listeners to 
+	 * it for the inputs you are interested in. Here is a simple example to get you started :</p>
+	 * 
+	 * <listing version="3.0">
+	 * 
+	 * import cc.cote.jmulator.emulators.IpacVe;
+	 * import cc.cote.jmulator.events.IpacVeEvent;
+	 * 
+	 * var emu:IpacVe = new IpacVe(stage);
+	 * emu.addEventListener(IpacVeEvent.INPUT_2COIN, test);
+	 * 
+	 * function test(e:IpacVeEvent):void {
+	 * 	trace(e);
+	 * }
+	 * </listing>
+	 * 
+	 * <p>Please note that this class will only work with encoders using the default (MAME) settings 
+	 * and not with custom programs.</p>
+	 * 
+	 * <p><b>Limitations</b></p>
+	 * 
+	 * <p>Flash Player is currently unable to detect a KEY_DOWN or KEY_UP event for 
+	 * the ALT key. This means that the input labeled "1SW2" (which uses the ALT key in the default 
+	 * MAME configuration) does not work in Flash Player. In Adobe AIR, the "1SW2" input works 
+	 * fine.</p>
+	 * 
+	 * <p>Also note that the 1SW4 input - which is assigned to the SHIFT key - will never be in 
+	 * typematic mode. This is the behaviour of the SHIFT key on most modern operating systems and 
+	 * has nothing to do with your board, Flash or this library.</p>
+	 * 
+	 * @see http://www.ultimarc.com
+	 * @see cc.cote.jmulator.emulators.Emulator
+	 * @see cc.cote.jmulator.events.IpacVeEvent
+	 */
+	public class IpacVe extends Emulator 
+	{
+		
+		/**
+		 * Creates an IpacVe object extending the base <code>Emulator</code> object. On top of 
+		 * inherited properties, this object defines the board-specific mappings between the label 
+		 * and key codes generated.
+		 * 
+		 * @param listenOn 		An InteractiveObject to attach the keyboard listener to. Usually 
+		 * 						this is the Stage.
+		 * @param typematic 	Whether or not to let the OS' typematic feature send multiple 
+		 * 						events.
+		 * @param triggering 	The method to use to trigger events. Can be one of 
+		 * 						EmulatorTriggerMode.TRIGGER_ON, EmulatorTriggerMode.TRIGGER_OFF or 
+		 * 						EmulatorTriggerMode.TRIGGER_BOTH (default). TRIGGER_ON means to 
+		 * 						dispatch the events only when the input is activated, TRIGGER_OFF 
+		 * 						means to dispatch the events only when the input is deactivated and 
+		 * 						TRIGGER_BOTH means to trigger events when the input is activated and 
+		 * 						deactivated.
+		 * 
+		 * @see cc.cote.jmulator.emulators.EmulatorTriggerMode
+		 * @see cc.cote.jmulator.emulators.Emulator
+		 * @see cc.cote.jmulator.events.IpacVeEvent
+		 */				
+		public function IpacVe(
+			listenOn:InteractiveObject, 
+			typematic:Boolean = false, 
+			triggering:String = EmulatorTriggerMode.TRIGGER_BOTH
+		) {
+			
+			super(listenOn, typematic, triggering);
+			
+			map[Keyboard.RIGHT] 	= [IpacVeEvent.INPUT_1RGHT];		// right arrow 	(39)
+			map[Keyboard.LEFT] 		= [IpacVeEvent.INPUT_1LEFT];		// left arrow 	(37)
+			map[Keyboard.UP] 		= [IpacVeEvent.INPUT_1UP];			// up arrow 	(38)
+			map[Keyboard.DOWN] 		= [IpacVeEvent.INPUT_1DOWN];		// down arrow 	(40)
+			
+			map[Keyboard.CONTROL] 	= [IpacVeEvent.INPUT_1SW1];			// left-ctrl 	(17)
+			
+			// The alt key is only supported in AIR
+			if (Capabilities.playerType == 'Desktop') {
+				map[Keyboard.ALTERNATE]	= [IpacVeEvent.INPUT_1SW2];		// left-alt		(18)
+			} else {
+				map['disabled']		= [IpacVeEvent.INPUT_1SW2];
+			}
+			
+			map[Keyboard.SPACE] 	= [IpacVeEvent.INPUT_1SW3];			// space 		(32)
+			map[Keyboard.SHIFT] 	= [IpacVeEvent.INPUT_1SW4];			// left-shift 	(16)
+			map[90]			 		= [IpacVeEvent.INPUT_1SW5];			// z
+			map[88]			 		= [IpacVeEvent.INPUT_1SW6];			// x
+			map[67]			 		= [IpacVeEvent.INPUT_1SW7];			// c
+			map[86]			 		= [IpacVeEvent.INPUT_1SW8];			// v
+
+			map[49] 				= [IpacVeEvent.INPUT_1STRT];		// 1
+			map[53]					= [IpacVeEvent.INPUT_1COIN];		// 5
+			
+			map[80]			 		= [IpacVeEvent.INPUT_1A];			// p
+			map[Keyboard.ENTER]		= [IpacVeEvent.INPUT_1B];			// enter	 	(13)
+			
+			map[71] 				= [IpacVeEvent.INPUT_2RGHT];		// g
+			map[68] 				= [IpacVeEvent.INPUT_2LEFT];		// d
+			map[82] 				= [IpacVeEvent.INPUT_2UP];			// r
+			map[70] 				= [IpacVeEvent.INPUT_2DOWN];		// f
+						
+			map[65] 				= [IpacVeEvent.INPUT_2SW1];			// a
+			map[83] 				= [IpacVeEvent.INPUT_2SW2];			// s
+			map[81] 				= [IpacVeEvent.INPUT_2SW3];			// q
+			map[87] 				= [IpacVeEvent.INPUT_2SW4];			// w
+			map[73]			 		= [IpacVeEvent.INPUT_2SW5];			// i
+			map[75]			 		= [IpacVeEvent.INPUT_2SW6];			// k
+			map[74]			 		= [IpacVeEvent.INPUT_2SW7];			// j
+			map[76]			 		= [IpacVeEvent.INPUT_2SW8];			// l
+			
+			map[54]					= [IpacVeEvent.INPUT_2COIN];		// 6
+			map[50] 				= [IpacVeEvent.INPUT_2STRT];		// 2
+			
+			map[Keyboard.TAB]		= [IpacVeEvent.INPUT_2A];			// tab 			(9)
+			map[Keyboard.ESCAPE]	= [IpacVeEvent.INPUT_2B];			// esc 			(27)
+			
+		}
+		
+	}
+	
+}

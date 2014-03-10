@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Ipac2Event,cc.cote.jmulator.events.Ipac2Event,ANY_INPUT,ANY_INPUT,ANY_INPUT,INPUT_1A,INPUT_1A,INPUT_1A,INPUT_1B,INPUT_1B,INPUT_1B,INPUT_1COIN,INPUT_1COIN,INPUT_1COIN,INPUT_1DOWN,INPUT_1DOWN,INPUT_1DOWN,INPUT_1LEFT,INPUT_1LEFT,INPUT_1LEFT,INPUT_1RGHT,INPUT_1RGHT,INPUT_1RGHT,INPUT_1STRT,INPUT_1STRT,INPUT_1STRT,INPUT_1SW1,INPUT_1SW1,INPUT_1SW1,INPUT_1SW2,INPUT_1SW2,INPUT_1SW2,INPUT_1SW3,INPUT_1SW3,INPUT_1SW3,INPUT_1SW4,INPUT_1SW4,INPUT_1SW4,INPUT_1SW5,INPUT_1SW5,INPUT_1SW5,INPUT_1SW6,INPUT_1SW6,INPUT_1SW6,INPUT_1SW7,INPUT_1SW7,INPUT_1SW7,INPUT_1SW8,INPUT_1SW8,INPUT_1SW8,INPUT_1UP,INPUT_1UP,INPUT_1UP,INPUT_2A,INPUT_2A,INPUT_2A,INPUT_2B,INPUT_2B,INPUT_2B,INPUT_2COIN,INPUT_2COIN,INPUT_2COIN,INPUT_2DOWN,INPUT_2DOWN,INPUT_2DOWN,INPUT_2LEFT,INPUT_2LEFT,INPUT_2LEFT,INPUT_2RGHT,INPUT_2RGHT,INPUT_2RGHT,INPUT_2STRT,INPUT_2STRT,INPUT_2STRT,INPUT_2SW1,INPUT_2SW1,INPUT_2SW1,INPUT_2SW2,INPUT_2SW2,INPUT_2SW2,INPUT_2SW3,INPUT_2SW3,INPUT_2SW3,INPUT_2SW4,INPUT_2SW4,INPUT_2SW4,INPUT_2SW5,INPUT_2SW5,INPUT_2SW5,INPUT_2SW6,INPUT_2SW6,INPUT_2SW6,INPUT_2SW7,INPUT_2SW7,INPUT_2SW7,INPUT_2SW8,INPUT_2SW8,INPUT_2SW8,INPUT_2UP,INPUT_2UP,INPUT_2UP,INPUT_3COIN,INPUT_3DOWN,INPUT_3LEFT,INPUT_3RGHT,INPUT_3STRT,INPUT_3SW1,INPUT_3SW2,INPUT_3SW3,INPUT_3SW4,INPUT_3SW5,INPUT_3SW6,INPUT_3SW7,INPUT_3SW8,INPUT_3UP,INPUT_4COIN,INPUT_4DOWN,INPUT_4LEFT,INPUT_4RGHT,INPUT_4STRT,INPUT_4SW1,INPUT_4SW2,INPUT_4SW3,INPUT_4SW4,INPUT_4SW5,INPUT_4SW6,INPUT_4SW7,INPUT_4SW8,INPUT_4UP,input,status"><title>cc.cote.jmulator.events.Ipac2Event</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Ipac2Event - Jmulator  API';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Jmulator API v2.0b</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?cc/cote/jmulator/events/Ipac2Event.html&amp;cc/cote/jmulator/events/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Ipac2Event</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Ipac2Event"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">cc.cote.jmulator.events</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Ipac2Event</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Ipac2Event  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../../../cc/cote/jmulator/events/EmulatorEvent.html">EmulatorEvent</a> <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.Event</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Since :&nbsp;</b></td><td>version 2.0b</td></tr></table><p></p><p></p><p></p>
+	 An Ipac2Event object is dispatched whenever the status of an input on an Ipac2 board 
+	 changes. The name of the dispatched event is exactly the name of the input (as labeled on the 
+	 board itself).
+	 
+	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../../../images/collapsed.gif"> Show Inherited Public Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable hideInheritedProperty" id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class="hideInheritedProperty"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../../../cc/cote/jmulator/events/EmulatorEvent.html#input" class="signatureLink">input</a> : String<div class="summaryTableDescription"> 
+		 A string that specifies which input triggered the event.</div></td><td class="summaryTableOwnerCol"><a href="../../../../cc/cote/jmulator/events/EmulatorEvent.html">EmulatorEvent</a></td></tr><tr class="hideInheritedProperty"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../../../cc/cote/jmulator/events/EmulatorEvent.html#status" class="signatureLink">status</a> : Boolean<div class="summaryTableDescription"> A boolean that specifies if the input was activated (true) or deactivated (false) </div></td><td class="summaryTableOwnerCol"><a href="../../../../cc/cote/jmulator/events/EmulatorEvent.html">EmulatorEvent</a></td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../../../images/collapsed.gif"> Show Inherited Public Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Ipac2Event()" class="signatureLink">Ipac2Event</a>(type:String, status:Boolean, input:String, bubbles:Boolean = false, cancelable:Boolean = false)</div><div class="summaryTableDescription"> Creates an Ipac2Event object </div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class="hideInheritedMethod"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../../../cc/cote/jmulator/events/EmulatorEvent.html#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">[override]  
+		 Returns a string representation of the event and associated properties.</div></td><td class="summaryTableOwnerCol"><a href="../../../../cc/cote/jmulator/events/EmulatorEvent.html">EmulatorEvent</a></td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ANY_INPUT" class="signatureLink">ANY_INPUT</a> : String = anyInput<div class="summaryTableDescription">[static] 
+		 The ANY_INPUT constant defines the value of the type property 
+		 of a anyInput event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1A" class="signatureLink">INPUT_1A</a> : String = input_1a<div class="summaryTableDescription">[static] 
+		 The INPUT_1A constant defines the value of the type property of 
+		 a input_1a event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1B" class="signatureLink">INPUT_1B</a> : String = input_1b<div class="summaryTableDescription">[static] 
+		 The INPUT_1B constant defines the value of the type property of 
+		 a input_1b event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1COIN" class="signatureLink">INPUT_1COIN</a> : String = input_1coin<div class="summaryTableDescription">[static] 
+		 The INPUT_1COIN constant defines the value of the type property 
+		 of a input_1coin event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1DOWN" class="signatureLink">INPUT_1DOWN</a> : String = input_1down<div class="summaryTableDescription">[static] 
+		 The INPUT_1DOWN constant defines the value of the type property 
+		 of a input_1down event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1LEFT" class="signatureLink">INPUT_1LEFT</a> : String = input_1left<div class="summaryTableDescription">[static] 
+		 The INPUT_1LEFT constant defines the value of the type property 
+		 of a input_1left event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1RGHT" class="signatureLink">INPUT_1RGHT</a> : String = input_1rght<div class="summaryTableDescription">[static] 
+		 The INPUT_1RGHT constant defines the value of the type property 
+		 of a input_1rght event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1STRT" class="signatureLink">INPUT_1STRT</a> : String = input_1strt<div class="summaryTableDescription">[static] 
+		 The INPUT_1STRT constant defines the value of the type property 
+		 of a input_1strt event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW1" class="signatureLink">INPUT_1SW1</a> : String = input_1sw1<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW1 constant defines the value of the type property 
+		 of a input_1sw1 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW2" class="signatureLink">INPUT_1SW2</a> : String = input_1sw2<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW2 constant defines the value of the type property 
+		 of a input_1sw2 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW3" class="signatureLink">INPUT_1SW3</a> : String = input_1sw3<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW3 constant defines the value of the type property 
+		 of a input_1sw3 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW4" class="signatureLink">INPUT_1SW4</a> : String = input_1sw4<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW4 constant defines the value of the type property 
+		 of a input_1sw4 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW5" class="signatureLink">INPUT_1SW5</a> : String = input_1sw5<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW5 constant defines the value of the type property 
+		 of a input_1sw5 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW6" class="signatureLink">INPUT_1SW6</a> : String = input_1sw6<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW6 constant defines the value of the type property 
+		 of a input_1sw6 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW7" class="signatureLink">INPUT_1SW7</a> : String = input_1sw7<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW7 constant defines the value of the type property 
+		 of a input_1sw7 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1SW8" class="signatureLink">INPUT_1SW8</a> : String = input_1sw8<div class="summaryTableDescription">[static] 
+		 The INPUT_1SW8 constant defines the value of the type property 
+		 of a input_1sw8 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_1UP" class="signatureLink">INPUT_1UP</a> : String = input_1up<div class="summaryTableDescription">[static] 
+		 The INPUT_1UP constant defines the value of the type property 
+		 of a input_1up event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2A" class="signatureLink">INPUT_2A</a> : String = input_2a<div class="summaryTableDescription">[static] 
+		 The INPUT_2A constant defines the value of the type property of 
+		 a input_2a event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2B" class="signatureLink">INPUT_2B</a> : String = input_2b<div class="summaryTableDescription">[static] 
+		 The INPUT_2B constant defines the value of the type property of 
+		 a input_2b event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2COIN" class="signatureLink">INPUT_2COIN</a> : String = input_2coin<div class="summaryTableDescription">[static] 
+		 The INPUT_2COIN constant defines the value of the type property 
+		 of a input_2coin event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2DOWN" class="signatureLink">INPUT_2DOWN</a> : String = input_2down<div class="summaryTableDescription">[static] 
+		 The INPUT_2DOWN constant defines the value of the type property 
+		 of a input_2down event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2LEFT" class="signatureLink">INPUT_2LEFT</a> : String = input_2left<div class="summaryTableDescription">[static] 
+		 The INPUT_2LEFT constant defines the value of the type property 
+		 of a input_2left event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2RGHT" class="signatureLink">INPUT_2RGHT</a> : String = input_2rght<div class="summaryTableDescription">[static] 
+		 The INPUT_2RGHT constant defines the value of the type property 
+		 of a input_2rght event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2STRT" class="signatureLink">INPUT_2STRT</a> : String = input_2strt<div class="summaryTableDescription">[static] 
+		 The INPUT_2STRT constant defines the value of the type property 
+		 of a input_2strt event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW1" class="signatureLink">INPUT_2SW1</a> : String = input_2sw1<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW1 constant defines the value of the type property 
+		 of a input_2sw1 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW2" class="signatureLink">INPUT_2SW2</a> : String = input_2sw2<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW2 constant defines the value of the type property 
+		 of a input_2sw2 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW3" class="signatureLink">INPUT_2SW3</a> : String = input_2sw3<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW3 constant defines the value of the type property 
+		 of a input_2sw3 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW4" class="signatureLink">INPUT_2SW4</a> : String = input_2sw4<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW4 constant defines the value of the type property 
+		 of a input_2sw4 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW5" class="signatureLink">INPUT_2SW5</a> : String = input_2sw5<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW5 constant defines the value of the type property 
+		 of a input_2sw5 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW6" class="signatureLink">INPUT_2SW6</a> : String = input_2sw6<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW6 constant defines the value of the type property 
+		 of a input_2sw6 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW7" class="signatureLink">INPUT_2SW7</a> : String = input_2sw7<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW7 constant defines the value of the type property 
+		 of a input_2sw7 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2SW8" class="signatureLink">INPUT_2SW8</a> : String = input_2sw8<div class="summaryTableDescription">[static] 
+		 The INPUT_2SW8 constant defines the value of the type property 
+		 of a input_2sw8 event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INPUT_2UP" class="signatureLink">INPUT_2UP</a> : String = input_2up<div class="summaryTableDescription">[static] 
+		 The INPUT_2UP constant defines the value of the type property 
+		 of a input_2up event object.</div></td><td class="summaryTableOwnerCol">Ipac2Event</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Ipac2Event()"></a><a name="Ipac2Event(String,Boolean,String,Boolean,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Ipac2Event</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Ipac2Event(type:String, status:Boolean, input:String, bubbles:Boolean = false, cancelable:Boolean = false)</code><p></p><p> Creates an Ipac2Event object </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">status</span>:Boolean</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">input</span>:String</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">cancelable</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="ANY_INPUT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">ANY_INPUT</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const ANY_INPUT:String = anyInput</code><p></p><p></p><p>
+		 The <code>ANY_INPUT</code> constant defines the value of the <code>type</code> property 
+		 of a <code>anyInput</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1A"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1A</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1A:String = input_1a</code><p></p><p></p><p>
+		 The <code>INPUT_1A</code> constant defines the value of the <code>type</code> property of 
+		 a <code>input_1a</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1B"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1B</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1B:String = input_1b</code><p></p><p></p><p>
+		 The <code>INPUT_1B</code> constant defines the value of the <code>type</code> property of 
+		 a <code>input_1b</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1COIN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1COIN</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1COIN:String = input_1coin</code><p></p><p></p><p>
+		 The <code>INPUT_1COIN</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1coin</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1DOWN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1DOWN</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1DOWN:String = input_1down</code><p></p><p></p><p>
+		 The <code>INPUT_1DOWN</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1down</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1LEFT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1LEFT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1LEFT:String = input_1left</code><p></p><p></p><p>
+		 The <code>INPUT_1LEFT</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1left</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1RGHT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1RGHT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1RGHT:String = input_1rght</code><p></p><p></p><p>
+		 The <code>INPUT_1RGHT</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1rght</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1STRT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1STRT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1STRT:String = input_1strt</code><p></p><p></p><p>
+		 The <code>INPUT_1STRT</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1strt</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW1"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW1</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW1:String = input_1sw1</code><p></p><p></p><p>
+		 The <code>INPUT_1SW1</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw1</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW2"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW2</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW2:String = input_1sw2</code><p></p><p></p><p>
+		 The <code>INPUT_1SW2</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw2</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW3"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW3</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW3:String = input_1sw3</code><p></p><p></p><p>
+		 The <code>INPUT_1SW3</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw3</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW4"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW4</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW4:String = input_1sw4</code><p></p><p></p><p>
+		 The <code>INPUT_1SW4</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw4</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW5"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW5</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW5:String = input_1sw5</code><p></p><p></p><p>
+		 The <code>INPUT_1SW5</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw5</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW6"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW6</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW6:String = input_1sw6</code><p></p><p></p><p>
+		 The <code>INPUT_1SW6</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw6</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW7"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW7</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW7:String = input_1sw7</code><p></p><p></p><p>
+		 The <code>INPUT_1SW7</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw7</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1SW8"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1SW8</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1SW8:String = input_1sw8</code><p></p><p></p><p>
+		 The <code>INPUT_1SW8</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1sw8</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_1UP"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_1UP</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_1UP:String = input_1up</code><p></p><p></p><p>
+		 The <code>INPUT_1UP</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_1up</code> event object.
+		 
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2A"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2A</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2A:String = input_2a</code><p></p><p></p><p>
+		 The <code>INPUT_2A</code> constant defines the value of the <code>type</code> property of 
+		 a <code>input_2a</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2B"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2B</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2B:String = input_2b</code><p></p><p></p><p>
+		 The <code>INPUT_2B</code> constant defines the value of the <code>type</code> property of 
+		 a <code>input_2b</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2COIN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2COIN</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2COIN:String = input_2coin</code><p></p><p></p><p>
+		 The <code>INPUT_2COIN</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2coin</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2DOWN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2DOWN</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2DOWN:String = input_2down</code><p></p><p></p><p>
+		 The <code>INPUT_2DOWN</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2down</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2LEFT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2LEFT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2LEFT:String = input_2left</code><p></p><p></p><p>
+		 The <code>INPUT_2LEFT</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2left</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2RGHT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2RGHT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2RGHT:String = input_2rght</code><p></p><p></p><p>
+		 The <code>INPUT_2RGHT</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2rght</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2STRT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2STRT</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2STRT:String = input_2strt</code><p></p><p></p><p>
+		 The <code>INPUT_2STRT</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2strt</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW1"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW1</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW1:String = input_2sw1</code><p></p><p></p><p>
+		 The <code>INPUT_2SW1</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw1</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW2"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW2</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW2:String = input_2sw2</code><p></p><p></p><p>
+		 The <code>INPUT_2SW2</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw2</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW3"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW3</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW3:String = input_2sw3</code><p></p><p></p><p>
+		 The <code>INPUT_2SW3</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw3</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW4"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW4</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW4:String = input_2sw4</code><p></p><p></p><p>
+		 The <code>INPUT_2SW4</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw4</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW5"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW5</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW5:String = input_2sw5</code><p></p><p></p><p>
+		 The <code>INPUT_2SW5</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw5</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW6"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW6</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW6:String = input_2sw6</code><p></p><p></p><p>
+		 The <code>INPUT_2SW6</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw6</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW7"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW7</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW7:String = input_2sw7</code><p></p><p></p><p>
+		 The <code>INPUT_2SW7</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw7</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2SW8"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2SW8</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2SW8:String = input_2sw8</code><p></p><p></p><p>
+		 The <code>INPUT_2SW8</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2sw8</code> event object.
+		 	
+		 </p></div><a name="constantDetail"></a><a name="INPUT_2UP"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">INPUT_2UP</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INPUT_2UP:String = input_2up</code><p></p><p></p><p>
+		 The <code>INPUT_2UP</code> constant defines the value of the <code>type</code> property 
+		 of a <code>input_2up</code> event object.
+		 	
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>© 2011-2014, <a href="http://cote.cc">Jean-Philippe Côté</a></footer><br/>Lundi Mars 10 2014, 01:12 PM -04:00  </center></div></body></html><!--© 2011-2014, Jean-Philippe Côté<br/>Lundi Mars 10 2014, 01:12 PM -04:00  -->
