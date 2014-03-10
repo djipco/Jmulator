@@ -1,5 +1,12 @@
 /releases
+<<<<<<< HEAD
 .actionScriptProperties
 .flexLibProperties
 .gitignore
 .project
+=======
+/.actionScriptProperties
+/.flexLibProperties
+/.gitignore
+/.project
+>>>>>>> FETCH_HEAD
