@@ -1,1 +1,5 @@
 /releases
+.actionScriptProperties
+.flexLibProperties
+.gitignore
+.project
